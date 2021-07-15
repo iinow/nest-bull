@@ -1,10 +1,11 @@
-import { Module } from '@nestjs/common'
-import { BullModule } from '@nestjs/bull'
+import { join } from 'path'
 import { AppController } from '~/app.controller'
 import { AppService } from '~/app.service'
 import { AudioModule } from '~/audio/audio.module'
+
+import { BullModule } from '@nestjs/bull'
+import { Module } from '@nestjs/common'
 import { ServeStaticModule } from '@nestjs/serve-static'
-import { join } from 'path'
 
 @Module({
   imports: [

@@ -1,5 +1,6 @@
+import { AudioService } from '@/audio/audio.service'
+
 import { Controller, Get, Injectable, Param, Query } from '@nestjs/common'
-import { AudioService } from './audio.service'
 
 @Controller('audio')
 export class AudioController {

@@ -1,6 +1,7 @@
+import { Job } from 'bull'
+
 import { OnQueueActive, Process, Processor } from '@nestjs/bull'
 import { Injectable } from '@nestjs/common'
-import { Job } from 'bull'
 
 @Processor('audio')
 export class AudioConsumer {

@@ -1,12 +1,14 @@
-import { Module } from '@nestjs/common'
-import { ExpressAdapter as BullBoardExpressAdapter } from '@bull-board/express'
 import { createBullBoard } from '@bull-board/api'
 import { BullAdapter } from '@bull-board/api/bullAdapter'
-import { AudioService } from './audio.service'
-import { AudioController } from './audio.controller'
-import { BullModule, InjectQueue } from '@nestjs/bull'
-import { AudioConsumer } from './audio.consumer'
+import { ExpressAdapter as BullBoardExpressAdapter } from '@bull-board/express'
 import { Queue } from 'bull'
+
+import { BullModule, InjectQueue } from '@nestjs/bull'
+import { Module } from '@nestjs/common'
+
+import { AudioConsumer } from './audio.consumer'
+import { AudioController } from './audio.controller'
+import { AudioService } from './audio.service'
 
 @Module({
   imports: [
